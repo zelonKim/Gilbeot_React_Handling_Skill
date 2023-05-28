@@ -236,7 +236,7 @@ export default Info;
 
 
 
-import { useReducer } from 'react';
+/* import { useReducer } from 'react';
 
 function reducer(state, action) {
     return {
@@ -252,6 +252,35 @@ const Info = () => {
     
     const changed = event => {dispatch(event.target)}
 
+    return(
+        <div>
+            <div>
+                <input name="name" value={name} onChange={changed} />
+                <input name="nickname" value={nickname} onChange={changed} />
+            </div>
+            <div>
+                <b>이름:</b> {name}
+            </div>
+            <div>
+                <b>닉네임:</b> {nickname}
+            </div>
+        </div>
+    )
+}
+export default Info; */
+
+
+/////////////////
+
+
+import useInput from './useInput';
+
+
+const Info = () => {
+
+    const [state, changed] = useInput({name:'', nickname:''})
+    const {name, nickname} = state;
+    
     return(
         <div>
             <div>
