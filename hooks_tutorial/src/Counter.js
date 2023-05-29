@@ -18,7 +18,7 @@ export default Counter
 //////////////////////
 
 
-import { useReducer } from 'react';
+/* import { useReducer } from 'react';
 
 function reducer(state, action) {
     switch (action.type) { // type에 따라 다른 작업을 수행함. 
@@ -46,4 +46,129 @@ const Counter = () => {
   </div>
   );
 };
-export default Counter 
+export default Counter  */
+
+//////////////////
+
+/* import { Component } from 'react'
+
+class Counter extends Component {
+    constructor(props) {
+        super(props)
+        this.state = { number: 0 } // state의 초기값 설정
+    }
+    render() {
+        const {number} = this.state; // state값을 가져옴.
+        return (
+        <div>
+            <h1>{number}</h1>
+            <button onClick = {()=> {this.setState({ number: number + 1 })}}>plus one</button> 
+        </div>
+        )// state값을 변경함.
+    }
+}
+export default Counter; */
+
+
+/* import { Component } from 'react'
+
+class Counter extends Component {
+    constructor(props) {
+        super(props)
+        this.state = { number: 0, negNumber:0 } 
+    }
+    render() {
+        const { number, negNumber } = this.state;
+        return (
+        <div>
+            <h1>plus:{number}</h1>
+            <h2>minus:{negNumber}</h2>
+            <button onClick = {()=> {this.setState({ number: number + 1, negNumber: negNumber - 1 })}}>plus and minus</button> 
+        </div>
+        )
+    }
+}
+export default Counter;
+// 버튼을 클릭하면 plus: 옆의 숫자는 1씩 증가하고, minus: 옆의 숫자는 1씩 감소함. */
+
+
+/* 
+import { Component } from 'react'
+
+class Counter extends Component {
+   state = { number: 0, negNumber:0 } 
+    
+    render() {
+        const { number, negNumber } = this.state;
+        return (
+        <div>
+            <h1>plus:{number}</h1>
+            <h2>minus:{negNumber}</h2>
+            <button onClick = {()=> {this.setState({ number: number + 1, negNumber: negNumber - 1 })}}>plus and minus</button> 
+        </div>
+        )
+    }
+}
+export default Counter; */
+
+///////////////////
+
+/* import { Component } from 'react'
+
+class Counter extends Component {
+   state = { number: 0 } 
+    
+    render() {
+        const { number } = this.state;
+        return (
+        <div>
+            <h1>plus:{number}</h1>
+            <button onClick = {()=> {this.setState({ number: number + 1}); 
+                                    this.setState({ number: this.state.number + 1})}}>plus two</button> 
+        </div>
+        )
+    }
+}
+export default Counter;
+// 버튼을 클릭해도 숫자가 1씩 증가함. */
+
+////////////////
+
+/* import { Component } from 'react'
+
+class Counter extends Component {
+   state = { number: 0 } 
+    
+    render() {
+        const { number } = this.state;
+        return (
+        <div>
+            <h1>plus:{number}</h1>
+            <button onClick = {()=> {this.setState( prevState => ({ number: prevState.number + 1}) );
+                                     this.setState( prevState => ({ number: prevState.number + 1}) )}}>plus two</button> 
+        </div>
+        )
+    }
+}
+export default Counter;
+// 버튼을 클릭하면 숫자가 2씩 증가함. */
+
+///////////////////////////
+
+import { Component } from 'react'
+
+class Counter extends Component {
+   state = { number: 0 } 
+    
+    render() {
+        const { number } = this.state;
+        return (
+        <div>
+            <h1>plus:{number}</h1>
+            <button onClick = {()=> {this.setState( { number: number + 1}, () => {console.log("setState was called")} )}}>plus one</button> 
+        </div>
+        )
+    }
+}
+export default Counter;
+// plus one 버튼을 클릭하면 숫자가 1 증가한후, 콘솔창에 setState was called가 출력됨.

@@ -250,3 +250,136 @@ function App() {
 }
 export default App;
 // 화면에 name is falsy가 출력됨. */
+
+///////////////////
+
+/* function App() {
+  const name="React"
+  const styles= {
+    backgroundColor:'black',
+    color: 'aqua',
+    fontSize: '48px',
+    fontWeight: 'bold',
+    padding: 16
+  }
+  return <div style={styles}>{name}</div>
+}
+export default App; */
+
+
+/* function App() {
+  const name="React"
+
+  return <div style={{
+    backgroundColor:'black',
+    color: 'aqua',
+    fontSize: '48px',
+    fontWeight: 'bold',
+    padding: 16
+  }}>{name}</div>
+}
+export default App; */
+
+
+/* import './App.css'
+
+function App() {
+  const name="React"
+  return <div className="reverse">{name}</div>
+}
+export default App; */
+
+//////////////
+
+
+/* function App() {
+  return (
+    <input> // 오류 발생
+  )
+}
+export default App; */
+
+
+
+/* function App() {
+  return (
+    <input/> 
+  )
+}
+export default App; */
+
+
+/* function App() {
+  return(
+    <>
+    <input /> 
+    </>
+  )
+}
+export default App; */
+
+
+//////////////
+
+
+/* 
+function App() {
+  return <div>Hello</div>
+}
+export default App; 
+*/
+
+
+/* import { Component } from 'react'
+
+class App extends Component{
+  render() {
+    return <div>Hello</div>
+  }
+}
+export default App; */
+
+//////////////
+
+/* import MyComponent from "./MyComponent";
+
+const App = () => {
+  return <MyComponent name="Seongjin" />;
+} 
+export default App; */
+
+
+////////////////
+
+/* import MyComponent from "./MyComponent";
+
+const App = () => {
+  return <MyComponent />;
+} 
+export default App; */
+
+///////////
+
+/* import MyComponent from "./MyComponent";
+
+const App = () => {
+  return <MyComponent>New York</MyComponent>;
+} 
+export default App; */
+
+///////////////
+
+/* import MyComponent from "./MyComponent"
+
+const App = () => {
+  return <MyComponent name="Seongjin"/>;
+} 
+export default App; */
+
+
+import Counter from "./Counter"
+
+const App = () => {
+  return <Counter />;
+} 
+export default App
