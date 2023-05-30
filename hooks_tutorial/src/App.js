@@ -377,9 +377,37 @@ const App = () => {
 export default App; */
 
 
-import Counter from "./Counter"
+/* import Counter from "./Counter"
 
 const App = () => {
   return <Counter />;
 } 
+export default App */
+
+
+/* import EventHandling from './EventHandling'
+
+const App = () => {
+  return <EventHandling />;
+} 
+export default App */
+
+
+/* import EventPractice from './EventPractice'
+
+const App = () => {
+  return <EventPractice />;
+} 
+export default App */
+
+import { Component } from 'react';
+import Validation from './Validation'
+
+class App extends Component {
+  render(){
+    return (
+      <Validation />
+    )
+  }
+}
 export default App
