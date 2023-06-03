@@ -6,11 +6,13 @@ import cn from 'classnames' // 조건부 스타일링
 const TodoListItem = ({todo, onRemove, onToggle, style}) => {
     const { id, text, checked } = todo;
     
-    return (
+    return ( // 프로퍼티로 받아온 style을 적용시켜줌.
         <div className="TodoListItem-virtualized" style={style}>
             <div className = "TodoListItem">
-                <div className={cn("checkbox", {checked})} 
-                    onClick={() => onToggle(id)}>
+                <div
+                    className={cn("checkbox", {checked})} 
+                    onClick={() => onToggle(id)}
+                    >
                     {checked ? <MdCheckBox /> : <MdCheckBoxOutlineBlank />}
                     <div className="text">{text}</div>
                 </div>        

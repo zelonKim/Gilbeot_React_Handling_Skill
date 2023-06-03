@@ -5,14 +5,12 @@ import './TodoList.scss'
 
 
 const TodoList = ({ todos, onRemove, onToggle }) => {
-
-    const rowRenderer = useCallback(
-        ({index, key, style}) => {
+    const rowRenderer = useCallback(({index, key, style}) => {
             const todo = todos[index]
             return (
                 <TodoListItem
                     todo={todo} 
-                    key={todo.id} 
+                    key={key}
                     onRemove={onRemove} 
                     onToggle={onToggle}
                     style={style}
@@ -28,7 +26,7 @@ const TodoList = ({ todos, onRemove, onToggle }) => {
             height={513}
             rowCount={todos.length}
             rowHeight={57}
-            rowRendere={rowRenderer}
+            rowRenderer={rowRenderer}
             list={todos}
             style={{outline: 'none'}}
         />
