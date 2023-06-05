@@ -53,7 +53,7 @@ export default App;
 
 ///////////////
 
-import { useState, useCallback } from 'react'
+/* import { useState, useCallback } from 'react'
 import NewsList from './components/NewsList';
 import Categories from './components/Categories'
 
@@ -66,6 +66,21 @@ const App = () => {
     <Categories category={category} onSelect={onSelect}/>
     <NewsList category={category}/>
     </>
+  )
+}
+export default App; */
+
+////////////////
+
+import { Route, Routes } from 'react-router-dom'
+import NewsPage from './pages/NewPage'
+
+function App() {
+  return(
+    <Routes>
+      <Route path="/" element={<NewsPage />} />
+      <Route path="/:category" element={<NewsPage />} />
+    </Routes>
   )
 }
 export default App;
