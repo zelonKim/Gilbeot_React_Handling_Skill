@@ -1,4 +1,4 @@
-import Button from "../components/common/Button";
+/* import Button from "../components/common/Button";
 
 const PostListPage = () => {
     return (
@@ -7,4 +7,16 @@ const PostListPage = () => {
     </div>
     )
 }
-export default PostListPage; 
+export default PostListPage;  */
+
+import HeaderContainer from "../containers/common/HeaderContainer"
+
+const PostListPage = () => {
+    return (
+        <>
+            <HeaderContainer />
+            <div>안녕하세요</div>
+        </>
+    )
+}
+export default PostListPage
